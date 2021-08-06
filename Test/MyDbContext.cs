@@ -9,7 +9,7 @@ namespace Test
         public DbSet<Assessment> Assessments { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseInMemoryDatabase("TestDb");
+            => options.UseSqlServer("Data Source=.;Initial Catalog=ThenIncludeNull;Integrated Security=True;");
     }
 
     public class Assessment
